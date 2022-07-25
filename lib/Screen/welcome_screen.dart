@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_chat_app_ui/Screen/signin_screen.dart';
 import 'package:simple_chat_app_ui/Util/colors.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -45,7 +46,14 @@ class WelcomeScreen extends StatelessWidget {
             ),
             FittedBox(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignInScreen(),
+                    ),
+                  );
+                },
                 child: Row(
                   children: [
                     Text(

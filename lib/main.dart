@@ -16,10 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chat App',
       theme: lightThemeData(context),
+      darkTheme: darkThemeData(context),
       home: const WelcomeScreen(),
     );
   }
 }
-
-
-

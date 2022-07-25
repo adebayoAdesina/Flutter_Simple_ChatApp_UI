@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_chat_app_ui/Util/colors.dart';
 
 const kDefaultPadding = 20.0;
-final appBarTheme = const AppBarTheme(centerTitle: false, elevation: 0);
+const appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
       primaryColor: kPrimaryColor,
@@ -22,16 +22,17 @@ ThemeData lightThemeData(BuildContext context) {
 
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
-      primaryColor: kPrimaryColor,
-      scaffoldBackgroundColor: kContentdarkColor,
-      appBarTheme: appBarTheme,
-      textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme).apply(
-        bodyColor: kContentLightColor,
-      ),
-      iconTheme: const IconThemeData(color: kContentdarkColor),
-      colorScheme: const ColorScheme.light(
-        primary: kPrimaryColor,
-        secondary: kSecondaryColor,
-        error: kErrorColor,
-      ));
+    primaryColor: kPrimaryColor,
+    scaffoldBackgroundColor: kContentdarkColor,
+    appBarTheme: appBarTheme,
+    textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme).apply(
+      bodyColor: kContentLightColor,
+    ),
+    iconTheme: const IconThemeData(color: kContentdarkColor),
+    colorScheme: const ColorScheme.light(
+      primary: kPrimaryColor,
+      secondary: kSecondaryColor,
+      error: kErrorColor,
+    ),
+  );
 }
