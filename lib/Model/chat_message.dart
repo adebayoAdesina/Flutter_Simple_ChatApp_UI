@@ -1,5 +1,5 @@
 enum ChatMessageType { text, audio, image, video }
-enum MessageStatus { notSent, notView, viewed}
+enum MessageStatus { notSent, notView, viewed }
 
 class ChatMessage {
   String? text;
@@ -7,28 +7,33 @@ class ChatMessage {
   MessageStatus? messageStatus;
   bool? isSender;
 
-  ChatMessage({
-    this.text,
-    this.messageType,
-    this.messageStatus,
-    this.isSender
-  });
+  ChatMessage({this.text, this.messageType, this.messageStatus, this.isSender});
 }
 
 List demoChatMessages = [
   ChatMessage(
-    text: "Hi bro",
-    messageType: ChatMessageType.text,
-    messageStatus: MessageStatus.viewed,
-  ),
+      text: "Hi bro",
+      messageType: ChatMessageType.text,
+      messageStatus: MessageStatus.viewed,
+      isSender: true),
   ChatMessage(
-    text: "Hi bro",
-    messageType: ChatMessageType.audio,
-    messageStatus: MessageStatus.notSent,
-  ),
+      text: "Hi",
+      messageType: ChatMessageType.text,
+      messageStatus: MessageStatus.viewed,
+      isSender: false),
   ChatMessage(
-    text: "Hi bro",
-    messageType: ChatMessageType.image,
-    messageStatus: MessageStatus.notView,
-  )
+      text: "How are you?",
+      messageType: ChatMessageType.text,
+      messageStatus: MessageStatus.notView,
+      isSender: true),
+  ChatMessage(
+      text: '',
+      messageType: ChatMessageType.audio,
+      messageStatus: MessageStatus.notSent,
+      isSender: false),
+  ChatMessage(
+      text: '',
+      messageType: ChatMessageType.video,
+      messageStatus: MessageStatus.notView,
+      isSender: false)
 ];
